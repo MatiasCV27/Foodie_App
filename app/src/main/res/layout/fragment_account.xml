@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F0F0"
-    tools:context=".NavbarFragment.AccountFragment">
+    tools:context=".NavbarFragment.AccountFragment"
+    android:id="@+id/AccountFragment">
+
+
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView2"
@@ -93,5 +96,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

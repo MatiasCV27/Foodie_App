@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaqActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="340dp"
+        android:layout_height="709dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preguntas Frecuentes (FAQ)\n\n
+        ¿Cómo realizar un pedido?\n\n
+        1. ¿Cómo hago un pedido en la aplicación?\n
+        - Abre la aplicación y navega por los restaurantes disponibles.\n
+        - Selecciona el restaurante de tu elección.\n
+        - Explora el menú y agrega los elementos deseados a tu carrito.\n
+        - Revisa tu pedido y procede al pago.\n\n
+        2. ¿Puedo personalizar mi pedido?\n
+        - Sí, muchos restaurantes permiten personalizar los platos según tus preferencias. Al realizar un pedido, busca opciones de personalización en el menú.\n\n
+        Pagos y Facturación\n\n
+        3. ¿Qué métodos de pago aceptan?\n
+        - Aceptamos pagos mediante tarjetas de crédito, tarjetas de débito y servicios de pago en línea. Algunos restaurantes también ofrecen pago en efectivo a la entrega.\n\n
+        4. ¿Cómo aplico un código de descuento?\n
+        - En la pantalla de pago, hay un campo para ingresar códigos de descuento. Ingrese el código y verifique que el descuento se aplique antes de confirmar su pedido.\n\n
+        Entrega y Seguimiento\n\n
+        5. ¿Cuánto tiempo tarda en entregarse mi pedido?\n
+        - El tiempo de entrega varía según la ubicación y la hora del día. Después de realizar un pedido, recibirás actualizaciones en tiempo real sobre el estado de tu entrega.\n\n
+        6. ¿Cómo puedo rastrear mi pedido?\n
+        - Después de confirmar tu pedido, podrás rastrear el progreso en la sección 'Mis Pedidos' de la aplicación. También recibirás notificaciones sobre el estado del pedido.\n\n
+        Problemas Comunes\n\n
+        7. ¿Qué hago si hay un problema con mi pedido?\n
+        - Si surge algún problema con tu pedido, como artículos faltantes o problemas con la calidad, ponte en contacto con nuestro servicio de atención al cliente a través de la sección 'Ayuda' en la aplicación.\n\n
+        8. ¿Cómo cancelo mi pedido?\n
+        - Puedes cancelar un pedido si aún no ha sido preparado. Ve a 'Mis Pedidos' y selecciona la opción de cancelar si está disponible. Ten en cuenta que algunos restaurantes tienen políticas de cancelación.\n\n
+        Cuenta y Seguridad\n\n
+        9. ¿Cómo cambio mi dirección de entrega?\n
+        - Puedes actualizar tu dirección en la sección de 'Configuración' de la aplicación. Asegúrate de hacer esto antes de confirmar tu pedido.\n\n
+        10. ¿Mi información personal está segura?\n
+        - Sí, tomamos la seguridad de los datos muy en serio. Tu información personal y datos de pago se cifran y se almacenan de forma segura." />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/cerrarFaq"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029"
+        app:srcCompat="@drawable/x" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

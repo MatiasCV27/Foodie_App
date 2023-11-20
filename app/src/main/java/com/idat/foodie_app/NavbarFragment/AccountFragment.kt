@@ -8,17 +8,20 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.content.Intent
-import android.content.DialogInterface
-import android.app.Activity.RESULT_OK
+
 import android.provider.MediaStore
-import android.Manifest
-import android.content.pm.PackageManager
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
+
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.idat.foodie_app.R
 import android.app.Activity
 import android.graphics.Bitmap
+import android.widget.Button
+import com.idat.foodie_app.AyudaActivity
+import com.idat.foodie_app.FaqActivity
+import com.idat.foodie_app.HistorialActivity
+
+import com.idat.foodie_app.databinding.FragmentAccountBinding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,6 +49,7 @@ class AccountFragment : Fragment() {
     private val TAKE_PHOTO_REQUEST = 2
     private lateinit var floatingActionButton: FloatingActionButton
     private lateinit var imageView2: ImageView
+    private lateinit var binding: FragmentAccountBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +57,34 @@ class AccountFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_account, container, false)
 
+        // Manejo del clic del botón btnHistorial
+        view.findViewById<Button>(R.id.btnHistorial).setOnClickListener {
+            val intent = Intent(activity, HistorialActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Manejo del clic del botón btnFaq
+        view.findViewById<Button>(R.id.btnFaq).setOnClickListener {
+            val intent = Intent(activity, FaqActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Manejo del clic del botón btnAyuda
+        view.findViewById<Button>(R.id.btnAyuda).setOnClickListener {
+            val intent = Intent(activity, AyudaActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
+    }
+
+    // ...
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Resto del código...
         floatingActionButton = view.findViewById(R.id.floatingActionButton)
         imageView2 = view.findViewById(R.id.imageView2)
 
@@ -60,8 +92,10 @@ class AccountFragment : Fragment() {
             showImageSourceDialog()
         }
 
-        return view
+
     }
+
+
 
     private fun showImageSourceDialog() {
         val options = arrayOf("Cámara", "Galería")
@@ -114,6 +148,8 @@ class AccountFragment : Fragment() {
             }
         }
     }
+
+
 
 
 

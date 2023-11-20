@@ -18,17 +18,14 @@
         android:theme="@style/Theme.Foodie_app"
         tools:targetApi="31">
         <activity
-            android:name=".ActvAyuda"
-            android:exported="false" />
+            android:name=".AyudaActivity"
+            android:exported="true" />
         <activity
-            android:name=".ActvFaq"
-            android:exported="false" />
+            android:name=".FaqActivity"
+            android:exported="true" />
         <activity
-            android:name=".NavbarFragment.ActvFaq"
-            android:exported="false" />
-        <activity
-            android:name=".ActvHistorial"
-            android:exported="false" />
+            android:name=".HistorialActivity"
+            android:exported="true" />
         <activity
             android:name=".MenuPrincipal"
             android:exported="false" />
